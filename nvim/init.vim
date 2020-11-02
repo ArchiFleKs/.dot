@@ -174,7 +174,7 @@ let g:terraform_align=1
 let g:terraform_fold_sections=0
 
 " yaml indentation
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " let g:ansible_unindent_after_newline = 1
 let g:ansible_name_highlight = 'b'
