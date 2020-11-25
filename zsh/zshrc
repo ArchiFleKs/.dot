@@ -49,7 +49,7 @@ export UPDATE_ZSH_DAYS=7
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -97,7 +97,6 @@ plugins=(
          gnu-utils
          golang
          gpg-agent
-         history
          httpie
          jsontools
          kubectl
@@ -175,6 +174,9 @@ export AWS_VAULT_PASS_PREFIX=aws-vault
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export CHAMBER_KMS_KEY_ALIAS=aws/ssm
 
+# lscolor
+# export LS_COLORS="$(vivid generate molokai)"
+
 # Aliases
 alias less=$PAGER
 alias zless=$PAGER
@@ -182,7 +184,18 @@ alias more=$PAGER
 alias vim='nvim'
 alias suroot='sudo -E -s'
 alias pubkey='ssh-keygen -y -f'
-#alias ls=colorls
+
+# rust aliases
+alias ls='exa --icons'
+alias cat='batcat'
+alias tree='exa --tree --icons'
+alias fd='fdfind'
+alias ps='procs'
+alias du='dust -r'
+alias sed='sd'
+alias htop='btm'
+alias grep='rg'
+alias dmesg='rmesg'
 
 # colorLS
 #source $(dirname $(gem which colorls))/tab_complete.sh
