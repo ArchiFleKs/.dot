@@ -164,6 +164,7 @@ let g:airline_right_alt_sep = '|'
 let g:powerline_loaded = 1
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
+let g:airline#extensions#keymap#enabled = 0
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
