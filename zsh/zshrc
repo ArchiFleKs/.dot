@@ -130,13 +130,6 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 # User configuration
 
-# Enable completion for particule password-store
-compdef _pass workpass
-zstyle ':completion::complete:workpass::' prefix "$HOME/.password-store-particule"
-workpass() {
-   PASSWORD_STORE_DIR=$HOME/.password-store-particule pass $@
-}
-
 # Completion
 source <(kubectl completion zsh)
 source <(minikube completion zsh)
@@ -196,9 +189,14 @@ alias sed='sd'
 alias htop='btm'
 alias grep='rg'
 alias dmesg='rmesg'
+alias pass='gopass'
 
-# colorLS
-#source $(dirname $(gem which colorls))/tab_complete.sh
+# Enable completion for particule password-store
+compdef _pass workpass
+zstyle ':completion::complete:workpass::' prefix "$HOME/.password-store-particule"
+workpass() {
+   PASSWORD_STORE_DIR=$HOME/.password-store-particule pass $@
+}
 
 # Completion
 autoload -U compinit && compinit
