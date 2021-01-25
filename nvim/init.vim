@@ -217,3 +217,6 @@ endfunc
 
 " All files
 autocmd BufWrite * :call DeleteTrailingWS()
+
+" Gopass
+au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile
