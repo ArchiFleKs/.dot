@@ -143,32 +143,9 @@ if [ -f '/home/klefevre/google-cloud-sdk/path.zsh.inc' ]; then . '/home/klefevre
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/klefevre/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/klefevre/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Add personal bin path before everything
-export PATH="$HOME/bin:$PATH"
-
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Env Vars
-export EDITOR='nvim'
-export MAILCONF='~/.mutt'
-export PAGER='less'
-export MANPAGER="nvim -c 'set ft=man' -"
-export GOPATH='/home/klefevre/.go'
-export BINPATH='/home/klefevre/bin'
-export CARGOBIN='/home/klefevre/.cargo/bin'
-export WORKON_HOME="$HOME/.virtualenvs"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH="$GOPATH/bin:$GOROOT/bin:$CARGOBIN:$PATH"
-export AWS_VAULT_BACKEND=pass
-export AWS_VAULT_PASS_PREFIX=aws-vault
-export PASSWORD_STORE_ENABLE_EXTENSIONS=true
-export CHAMBER_KMS_KEY_ALIAS=aws/ssm
-
-# lscolor
-# export LS_COLORS="$(vivid generate molokai)"
 
 # Aliases
 alias less=$PAGER

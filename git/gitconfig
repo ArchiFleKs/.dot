@@ -33,3 +33,5 @@
   showUntrackedFiles = all
 [transfert]
   fsckobjects = true
+[init]
+	templateDir = /home/klefevre/.git-template
