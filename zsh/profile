@@ -25,7 +25,11 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# LinuxBrew
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# Gofish
+eval $(gofish tank)
 
 # Global Env
 export EDITOR='nvim'
