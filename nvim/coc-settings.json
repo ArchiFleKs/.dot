@@ -21,11 +21,11 @@
         "kubernetes": "/*.yaml",
         "https://json.schemastore.org/kustomization.json": "kustomization.yaml",
         "https://docs.renovatebot.com/renovate-schema.json": "renovate.json",
-        "https://json.schemastore.org/ansible-role-2.9.json": "/*.yml",
-        "https://json.schemastore.org/ansible-playbook.json": "/*.yml",
+        "https://json.schemastore.org/ansible-role-2.9.json": "ansible.yml",
+        "https://json.schemastore.org/ansible-playbook.json": "playbook.yml",
         "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": ["docker-compose.yml", "docker-compose.yaml"],
         "https://json.schemastore.org/travis.json": ".travis.yml",
-        "https://json.schemastore.org/github-workflow.json": "/*.yml",
+        "https://json.schemastore.org/github-workflow.json": "/**workflows\/*.yml",
         "https://json.schemastore.org/gitlab-ci.json": "gitlab-ci.yml"
     },
     "yaml.format.enable": true
