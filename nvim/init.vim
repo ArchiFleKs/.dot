@@ -28,12 +28,18 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'artanikin/vim-synthwave84'
+Plug 'Elethom/midnight.vim'
+Plug 'averak/laserwave.vim'
+Plug 'NLKNguyen/papercolor-theme'
 
 " Moving
 Plug 'easymotion/vim-easymotion'
 
 " Format
 Plug 'godlygeek/tabular'
+Plug 'Yggdroot/indentLine'
+Plug 'dylanaraps/wal.vim'
+Plug 'rhysd/vim-fixjson'
 
 " Completion / Syntax
 Plug 'sheerun/vim-polyglot'
@@ -124,7 +130,7 @@ set magic      " Use 'magic' patterns (extended regular expressions).
 
 
 set background=dark " Background
-colorscheme nord " Colorscheme
+colorscheme PaperColor " Colorscheme
 set noshowmode " Do not show mode
 
 " Transparent background
@@ -190,6 +196,7 @@ let g:powerline_loaded = 1
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 let g:airline#extensions#keymap#enabled = 0
+"let g:airline_theme='wal'
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
