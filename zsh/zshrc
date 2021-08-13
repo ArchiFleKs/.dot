@@ -195,7 +195,7 @@ autoload -U compinit && compinit
 # fi
 
 export GITHUB_OWNER=$(pass show -o github.com/archifleks owner)
-export GIHTUB_TOKEN=$(pass show -o github.com/archifleks token)
+export GITHUB_TOKEN=$(pass show -o github.com/archifleks token)
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
