@@ -123,8 +123,6 @@ plugins=(
   zsh-navigation-tools
   zsh-syntax-highlighting
   zsh-autosuggestions
-  zsh_reload
-  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -135,6 +133,9 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 # User configuration
 
+# Load zoxide
+eval "$(zoxide init zsh)"
+
 # Completion
 source <(kubectl completion zsh)
 source <(minikube completion zsh)
@@ -143,6 +144,7 @@ source <(helm completion zsh)
 kind completion zsh > $ZSH/completions/_kind
 gopass completion zsh > $ZSH/completions/_gopass
 flux completion zsh > $ZSH/completions/_flux
+eval "$(aws-vault --completion-script-zsh)"
 
 . /etc/os-release
 
@@ -194,11 +196,19 @@ autoload -U compinit && compinit
 #   export EDITOR='mvim'
 # fi
 
+export VAULT_FORMAT=json
+export VAULT_ADDR="http://localhost:8200"
+
 export GITHUB_OWNER=$(pass show -o github.com/archifleks owner)
 export GITHUB_TOKEN=$(pass show -o github.com/archifleks token)
+export GITGUARDIAN_API_KEY=$(pass show -o gitguardian.com/apikey)
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

@@ -46,3 +46,5 @@ export AWS_VAULT_BACKEND=pass
 export AWS_VAULT_PASS_PREFIX=aws-vault
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export CHAMBER_KMS_KEY_ALIAS=aws/ssm
+
+export PATH="/home/klefevre/.local/share/solana/install/active_release/bin:$PATH"

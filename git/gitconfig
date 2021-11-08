@@ -1,37 +1,64 @@
+[include]
+    path = ~/.config/delta/themes.gitconfig
+
 [user]
-  email = lefevre.kevin@gmail.com
+  email = kevin@particule.io
   name = Kevin Lefevre
   signingkey = AAC0A3329D1D5FC08B135B40FE7AA64F0C22CFC8
-[core]
-  pager = diff-so-fancy | less --tabs=4 -RFX
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
 [color]
   ui = true
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
-[color "diff"]
-  meta = yellow
-  frag = magenta bold
-  commit = yellow bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
+
 [pull]
   rebase = true
+
 [alias]
   c = commit -s
+
 [commit]
   gpgsign = yes
+
+[diff]
+  colorMoved = default
+
 [merge]
   conflictstyle = diff3
+
 [push]
   default = current
   followTags = true
+
 [status]
   showUntrackedFiles = all
+
 [transfert]
   fsckobjects = true
+
 [init]
-	templateDir = /home/klefevre/.git-template
+  templateDir = /home/klefevre/.git-template
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+  # features = collared-trogon
+  #features = calochortus-lyalliia
+  features = interactive decorations
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
