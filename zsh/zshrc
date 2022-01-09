@@ -80,7 +80,6 @@ plugins=(
   asdf
   archlinux
   aws
-  cargo
   command-not-found
   common-aliases
   copydir
@@ -199,7 +198,6 @@ autoload -U compinit && compinit
 export VAULT_FORMAT=json
 export VAULT_ADDR="http://localhost:8200"
 
-export GITHUB_OWNER=$(pass show -o github.com/archifleks owner)
 export GITHUB_TOKEN=$(pass show -o github.com/archifleks token)
 export GITGUARDIAN_API_KEY=$(pass show -o gitguardian.com/apikey)
 
