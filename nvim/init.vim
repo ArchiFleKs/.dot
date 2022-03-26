@@ -28,7 +28,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'artanikin/vim-synthwave84'
-Plug 'Elethom/midnight.vim'
 Plug 'averak/laserwave.vim'
 Plug 'NLKNguyen/papercolor-theme'
 
