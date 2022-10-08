@@ -204,6 +204,9 @@ export GITGUARDIAN_API_KEY=$(pass show -o gitguardian.com/apikey)
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
+# Man
+export MANPAGER='nvim +Man!'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
